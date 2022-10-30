@@ -9,8 +9,9 @@ databaseChangeLog:
               - column:
                   name: id
                   type: bigint
+                  autoIncrement: true
                   constraints:
-                    autoIncrement: true
+                    primaryKey: true
                     nullable: false
               - column:
                   name: client_id
@@ -21,6 +22,9 @@ databaseChangeLog:
               - column:
                   name: full_name
                   type: varchar(50)
+              - column:
+                  name: age
+                  type: int
               - column:
                   name: city
                   type: varchar(30)

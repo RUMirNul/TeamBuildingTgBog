@@ -6,5 +6,6 @@ import ru.growstreet.teambuildingtgbog.entity.Profile;
 
 @Repository
 public interface ProfileRepository extends JpaRepository<Profile, Long> {
+    Profile getProfileByClientId(long userId);
 
 }

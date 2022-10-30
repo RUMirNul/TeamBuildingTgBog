@@ -2,6 +2,7 @@ package ru.growstreet.teambuildingtgbog.entity;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.experimental.Accessors;
 import ru.growstreet.teambuildingtgbog.constant.Role;
 import ru.growstreet.teambuildingtgbog.constant.State;
 
@@ -11,6 +12,7 @@ import javax.persistence.*;
 @Table(name = "client")
 @Getter
 @Setter
+@Accessors(chain = true)
 public class Client {
 
     @Id
@@ -22,6 +24,9 @@ public class Client {
 
     @Column(name = "chat_id")
     private long chatId;
+
+    @Column(name = "username")
+    private String username;
 
     @Column(name = "role")
     @Enumerated(EnumType.STRING)

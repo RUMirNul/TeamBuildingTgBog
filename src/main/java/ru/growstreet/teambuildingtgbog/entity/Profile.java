@@ -18,22 +18,25 @@ public class Profile {
     private long clientId;
 
     @Column(name = "full_name")
-    private String fillName;
+    private String fillName = "";
+
+    @Column(name = "age")
+    private int age = 20;
 
     @Column(name = "city")
-    private String city;
+    private String city = "";
 
     @Column(name = "position")
-    private String position;
+    private String position = "";
 
     @Column(name = "department")
-    private String department;
+    private String department = "";
 
     @Column(name = "about_oneself")
-    private String aboutOneself;
+    private String aboutOneself = "";
 
     @Column(name = "photo_id")
-    private String photoId;
+    private String photoId = "AgACAgIAAxkBAAMfY14AATvpR_G9lgXckQhnbEeyiWfSAAJTwDEbVe3wShzSanfiEi-FAQADAgADcwADKgQ";
 
     @Column(name = "active")
     private boolean active = false;
