@@ -1,0 +1,41 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-profile-table
+      author: a.svistunov
+      changes:
+        - createTable:
+            tableName: profile
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    autoIncrement: true
+                    nullable: false
+              - column:
+                  name: client_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: full_name
+                  type: varchar(50)
+              - column:
+                  name: city
+                  type: varchar(30)
+              - column:
+                  name: position
+                  type: varchar(50)
+              - column:
+                  name: department
+                  type: varchar(50)
+              - column:
+                  name: about_oneself
+                  type: varchar(300)
+              - column:
+                  name: photo_id
+                  type: varchar(100)
+              - column:
+                  name: active
+                  type: boolean
